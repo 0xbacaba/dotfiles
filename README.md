@@ -15,4 +15,4 @@ Files you probably want to change:
 
 ## neovim setup:
 
-See [nvim](https://github.com/LetsDuck2210/nvim_config/README.md) for details
+See [nvim](https://github.com/LetsDuck2210/nvim_config) for details
