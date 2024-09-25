@@ -1,0 +1,11 @@
+prompt=power
+color=~/.config/wofi/colors
+stylesheet=style.css
+allow_images=true
+insensitive=true
+no_actions=true
+sort_order=default
+single_click=true
+location=bottom_left
+width=20%
+cache_file=/dev/null

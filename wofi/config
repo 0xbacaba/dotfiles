@@ -1,0 +1,10 @@
+prompt=
+color=~/.config/wofi/colors
+stylesheet=style.css
+allow_images=true
+insensitive=true
+no_actions=true
+sort_order=alphabetical
+single_click=true
+location=bottom_left
+width=20%
