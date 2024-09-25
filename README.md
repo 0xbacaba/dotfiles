@@ -2,6 +2,15 @@
 
 ## hyprland setup:
 
+Requirements:
+
+- [hyprland](https://github.com/hyprwm/Hyprland)
+- [hyprpaper](https://github.com/hyprwm/hyprpaper)
+- [wofi](https://hg.sr.ht/~scoopta/wofi)
+- [waybar](https://github.com/Alexays/Waybar)
+- [hyprshot](https://github.com/Gustash/Hyprshot)
+- [hyprpicker](https://github.com/hyprwm/hyprpicker)
+
 Files you probably want to change:
 
 - [*/hypr*](hypr)
