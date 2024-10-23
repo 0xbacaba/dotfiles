@@ -10,6 +10,7 @@ Requirements:
 - [waybar](https://github.com/Alexays/Waybar)
 - [hyprshot](https://github.com/Gustash/Hyprshot)
 - [hyprpicker](https://github.com/hyprwm/hyprpicker)
+- [dunst](https://github.com/dunst-project/dunst)
 
 Files you probably want to change:
 
