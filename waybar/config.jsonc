@@ -10,6 +10,7 @@
 	"margin-bottom": 4,
     // Choose the order of the modules
     "modules-left": [
+        "custom/start",
         "hyprland/workspaces",
 		"wlr/taskbar"
     ],
@@ -85,5 +86,11 @@
 		"on-click-middle": "close",
 		"all-outputs": true,
 		"sort-by-app-id": true
+	},
+	"custom/start": {
+	    "format": "◻",
+	    "icon-size": 22,
+	    "on-click": "hyprctl keyword exec '$menu'",
+	    "on-click-right": "hyprctl keyword exec '$menuAlt'"
 	}
 }

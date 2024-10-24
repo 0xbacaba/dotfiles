@@ -131,3 +131,7 @@ label:focus {
 #taskbar button.active {
 	border-top: 2px solid white;
 }
+
+#custom-start {
+    margin-left: 10px;
+}
