@@ -27,7 +27,7 @@ function print_options() {
 	done
 }
 print_options
-selected=`print_options | wofi -c $wofi_config -S dmenu`
+selected=`pkill wofi || print_options | wofi -c $wofi_config -S dmenu`
 
 # function current_session() {
 # 	loginctl list-sessions -j | jq -r ".[] | select(.seat != null) | select(.user == \"$USER\") | .session"
