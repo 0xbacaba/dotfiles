@@ -13,9 +13,9 @@ wofi_config=~/.config/hypr/scripts/power_wofi_config
 
 options=(
 	"\U0f0425\tshutdown"
+	"\U0f04b2\tsuspend"
 	"\U0f0709\treboot"
 	"\U0f0343\tlogout"
-	# "\U0f033e\tlock"
 )
 
 function raw() {
@@ -39,18 +39,17 @@ case "$selected" in
 		systemctl poweroff
 		;;
 	`raw ${options[1]}`)
+		echo "[suspend] systemctl suspend"
+		systemctl suspend
+		;;
+	`raw ${options[2]}`)
 		echo "[reboot] systemctl reboot"
 		systemctl reboot
 		;;
-	`raw ${options[2]}`)
+	`raw ${options[3]}`)
 		echo "[logout] hyprctl dispatch exit"
 		hyprctl dispatch exit
 		;;
-	# `raw ${options[3]}`)
-	# 	session=`current_session`
-	# 	echo "[lock] loginctl lock-session $session"
-	# 	loginctl lock-session $session
-	# 	;;
 	*)
 		echo "WARNING: unimplemented: $selected"
 		;;
