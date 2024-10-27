@@ -1,0 +1,49 @@
+# vim: ft=cfg
+
+[global]
+	font = Iosevka Term 11
+	frame_color = "#33E4FF"
+	frame_width = 2
+	separator_color = frame
+	transparency = 15
+	corner_radius = 10
+	origin = top-right
+	offset = 6x6
+
+	markup = yes
+	format = "<b><u>%s</u></b> %p\n%b"
+	sort = no
+	alignment = left
+	word_wrap = yes
+	ignore_newline = no
+	icon_corner_radius = 5
+	max_icon_size = 40
+	icon_path = /usr/share/icons/breeze-dark/mimetypes/64/:/usr/share/icons/breeze-dark/status/22/:/usr/share/icons/breeze-dark/devices/16/:/usr/share/icons/breeze-dark/emblems/24/:/usr/share/icons/breeze-dark/emotes/22/:/usr/share/icons/breeze-dark/actions/24/
+	padding = 4
+	horizontal_padding = 4
+	show_age_threshold = -1
+	show_indicators = false
+
+	stack_duplicates = yes
+	hide_duplicate_count = yes
+	idle_threshold = 30
+	monitor = 1
+	follow = none
+
+[urgency_low]
+	frame_color = "#88F6EB"
+	foreground = "#888888"
+	background = "#191311"
+	timeout = 3
+
+[urgency_normal]
+	frame_color = "#33CCFF"
+	foreground = "#888888"
+	background = "#191311"
+	timeout = 4
+
+[urgency_critical]
+	frame_color = "#FF6533"
+	foreground = "#888888"
+	background = "#191311"
+	timeout = 6
