@@ -1,3 +1,6 @@
 wofi/data_dirs/applications/*.desktop
 wofi/data_dirs/applications/*.cache
 wofi/data_dirs/applications/*.list
+
+hypr/assets/*
+!hypr/assets/README.md
