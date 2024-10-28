@@ -29,10 +29,6 @@ function print_options() {
 print_options
 selected=`pkill wofi || print_options | wofi -c $wofi_config -S dmenu`
 
-# function current_session() {
-# 	loginctl list-sessions -j | jq -r ".[] | select(.seat != null) | select(.user == \"$USER\") | .session"
-# }
-
 case "$selected" in
 	`raw ${options[0]}`)
 		echo "[shutdown] systemctl poweroff"
@@ -40,6 +36,7 @@ case "$selected" in
 		;;
 	`raw ${options[1]}`)
 		echo "[suspend] systemctl suspend"
+		hyprlock &
 		systemctl suspend
 		;;
 	`raw ${options[2]}`)
