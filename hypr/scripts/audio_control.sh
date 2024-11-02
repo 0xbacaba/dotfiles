@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SEND_NOTIFICATION=0
+
 action=$1
 args=$2
 opt=""
@@ -38,4 +40,6 @@ if [ "$action" == "volume" ]; then
   opt="-h int:value:`pactl get-sink-volume @DEFAULT_SINK@ | grep -Eo '[0-9]+%' | head -n 1 | sed 's/%//'`"
 fi
 
-notify-send -i "/usr/share/icons/breeze-dark/$icon" "$text" $opt
+if [ "$SEND_NOTIFICATION" != "0" ]; then
+  notify-send -i "/usr/share/icons/breeze-dark/$icon" "$text" $opt
+fi

@@ -18,7 +18,7 @@
     ],
     "modules-right": [
         "tray",
-		// "pulseaudio",
+		"pulseaudio",
         "clock"
     ],
     // Modules configuration
@@ -53,7 +53,7 @@
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "{icon} {format_source}",
         "format-muted": "{format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
