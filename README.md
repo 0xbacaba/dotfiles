@@ -16,7 +16,6 @@ Requirements:
 Files you probably want to change:
 
 - [*/hypr*](hypr)
-    - [`hyprpaper.conf`](hypr/hyprpaper.conf)
     - [`hyprlock.conf`](hypr/hyprlock.conf)
     - [`hyprpaper.conf`](hypr/hyprpaper.conf)\
     [*/config*](hypr/config)
