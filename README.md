@@ -6,6 +6,7 @@ Requirements:
 
 - [hyprland](https://github.com/hyprwm/Hyprland)
 - [hyprlock](https://github.com/hyprwm/hyprlock)
+- [hyprpolkitagent](https://github.com/hyprwm/hyprpolkitagent)
 - [hyprpaper](https://github.com/hyprwm/hyprpaper)
 - [hyprshot](https://github.com/Gustash/Hyprshot)
 - [wofi](https://hg.sr.ht/~scoopta/wofi)
