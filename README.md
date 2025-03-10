@@ -2,17 +2,24 @@
 
 ## hyprland setup:
 
-Requirements:
+<details>
+    <summary>
+    Requirements
+    </summary>
 
-- [hyprland](https://github.com/hyprwm/Hyprland)
-- [hyprlock](https://github.com/hyprwm/hyprlock)
-- [polkit-kde-agent](https://github.com/KDE/polkit-kde-agent-1)
-- [hyprpaper](https://github.com/hyprwm/hyprpaper)
-- [hyprshot](https://github.com/Gustash/Hyprshot)
-- [wofi](https://hg.sr.ht/~scoopta/wofi)
-- [waybar](https://github.com/Alexays/Waybar)
-- [dunst](https://github.com/dunst-project/dunst)
-- [clipse](https://github.com/savedra1/clipse)
+- [hyprland](https://github.com/hyprwm/Hyprland) (duh)
+- [wofi](https://hg.sr.ht/~scoopta/wofi) (app-launcher/menu)
+- [dunst](https://github.com/dunst-project/dunst) (notification daemon)
+- [waybar](https://github.com/Alexays/Waybar) (taskbar)
+- [hyprpaper](https://github.com/hyprwm/hyprpaper) (wallpaper utility)
+- [polkit-kde-agent](https://github.com/KDE/polkit-kde-agent-1) (authentication agent)
+- [hyprlock](https://github.com/hyprwm/hyprlock) (lockscreen)
+- [hyprshot](https://github.com/Gustash/Hyprshot) (screenshot utility)
+- [clipse](https://github.com/savedra1/clipse) (clipboard manager)
+- [hypr-zoom](https://github.com/FShou/hypr-zoom/tree/main) (zoom utility)
+</details>
+
+<br>
 
 Files you probably want to change:
 
