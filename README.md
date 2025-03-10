@@ -22,7 +22,6 @@
 <br>
 
 Files you probably want to change:
-
 - [*/hypr*](hypr)
     - [`hyprlock.conf`](hypr/hyprlock.conf)
     - [`hyprpaper.conf`](hypr/hyprpaper.conf)\
@@ -32,6 +31,19 @@ Files you probably want to change:
         - [`rules.conf`](hypr/config/rules.conf)  # if you have a different monitor or app setup
         - [`binds.conf`](hypr/config/binds.conf)  # if you remove any apps completely
 
+## tmux setup:
+
+Keybinds: 
+- CTRL-[HJKL] to move between split panes with respect to (n)vim splits
+
+Style:
+- catppuccin theme
+- rounded window status
+
+Other:
+- Copy-Mode: vi
+- Passthrough enabled
+- Mouse enabled
 
 ## neovim setup:
 
