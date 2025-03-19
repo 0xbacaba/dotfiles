@@ -17,6 +17,7 @@
 - [hyprshot](https://github.com/Gustash/Hyprshot) (screenshot utility)
 - [clipse](https://github.com/savedra1/clipse) (clipboard manager)
 - [hypr-zoom](https://github.com/FShou/hypr-zoom/tree/main) (zoom utility)
+- [obs-cmd](https://github.com/grigio/obs-cmd) (communicate with obs-websocket)
 </details>
 
 <br>
@@ -24,12 +25,14 @@
 Files you probably want to change:
 - [*/hypr*](hypr)
     - [`hyprlock.conf`](hypr/hyprlock.conf)
-    - [`hyprpaper.conf`](hypr/hyprpaper.conf)\
-    [*/config*](hypr/config)
+    - [`hyprpaper.conf`](hypr/hyprpaper.conf)
+    - [*/config*](hypr/config)
         - [`monitors.conf`](hypr/config/monitors.conf)
         - [`apps.conf`](hypr/config/apps.conf)
         - [`rules.conf`](hypr/config/rules.conf)  # if you have a different monitor or app setup
         - [`binds.conf`](hypr/config/binds.conf)  # if you remove any apps completely
+    - [*/.secrets*](hypr/.secrets)  # See `hypr/.secrets/README.md` for details
+        - obs\_ws
 
 ## tmux setup:
 
