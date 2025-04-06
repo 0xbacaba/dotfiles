@@ -50,4 +50,4 @@ Other:
 
 ## neovim setup:
 
-See [nvim](https://github.com/LetsDuck2210/nvim_config) for details
+See [nvim](https://github.com/0xbacaba/nvim_config) for details
