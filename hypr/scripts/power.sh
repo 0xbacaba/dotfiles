@@ -36,7 +36,7 @@ case "$selected" in
 		;;
 	`raw ${options[1]}`)
 		echo "[suspend] systemctl suspend"
-		hyprlock &
+		hyprlock --immediate &
 		systemctl suspend
 		;;
 	`raw ${options[2]}`)
