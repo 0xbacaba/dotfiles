@@ -51,3 +51,45 @@ Other:
 ## neovim setup:
 
 See [nvim](https://github.com/0xbacaba/nvim_config) for details
+
+## firenvim setup:
+
+<details>
+  <summary> How to use </summary>
+
+  1. see [firenvim's github](https://github.com/glacambre/firenvim), especially [SECURITY.md](https://github.com/glacambre/firenvim/blob/master/SECURITY.md) \
+     $\to$ Install the browser plugin
+  2. Run `NVIM_APPNAME="firenvim" nvim` \
+     This should install the neovim plugin and run its installer.
+
+</details>
+
+<details>
+  <summary> Browser support </summary>
+
+  The following are officially supported and should *just work*
+  - arc
+  - brave
+  - chrome
+  - chrome-canary
+  - chrome-dev
+  - chromium
+  - edge
+  - firefox
+  - librewolf
+  - opera
+  - ungoogled-chromium
+  - vivaldi
+  - waterfox
+
+  For other firefox based browsers (like zen) this should work (assuming firefox is installed):
+  ```bash
+  # This assumes firefox is installed, any other fork will probably work too
+  # just replace .mozilla with e.g. .librewolf
+  ln -s ~/.mozilla/native-messaging-hosts ~/.zen/
+
+  # Or just this if ~/.zen/native-messaging-hosts/ exists
+  ln -s ~/.mozilla/native-messaging-hosts/firenvim.json ~/.zen/native-messaging-hosts/
+  ```
+
+</details>
