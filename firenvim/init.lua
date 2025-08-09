@@ -40,6 +40,20 @@ require("lazy").setup({
 				vim.g.firenvim_config.localSettings["https?://docs.google.com/"] = { takeover = "never", priority = 1 }
 			end,
 		},
+		{
+			"kylechui/nvim-surround",
+			version = "*",
+			event = "VeryLazy",
+			config = function()
+				require("nvim-surround").setup({})
+			end,
+		},
+		{
+			"nvim-treesitter/nvim-treesitter",
+			branch = "master",
+			lazy = false,
+			build = ":TSUpdate",
+		},
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
