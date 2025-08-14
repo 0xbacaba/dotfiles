@@ -54,10 +54,19 @@ require("lazy").setup({
 			lazy = false,
 			build = ":TSUpdate",
 		},
+		{
+			"baliestri/aura-theme",
+			lazy = false,
+			priority = 1000,
+			config = function(plugin)
+				vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+				vim.cmd([[colorscheme aura-dark]])
+			end,
+		},
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "habamax" } },
+	install = { colorscheme = { "aura-dark" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
