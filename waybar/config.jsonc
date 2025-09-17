@@ -18,6 +18,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/homeassist",
 		"pulseaudio",
         "clock"
     ],
@@ -92,5 +93,9 @@
 	    "icon-size": 22,
 	    "on-click": "hyprctl keyword exec '$menu'",
 	    "on-click-right": "hyprctl keyword exec '$menuAlt'"
-	}
+	},
+    "custom/homeassist": {
+        "format": " 󰟐 ",
+        "on-click": "homeassistant-desktop"
+    }
 }

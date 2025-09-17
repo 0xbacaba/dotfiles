@@ -7,4 +7,6 @@ no_actions=true
 sort_order=alphabetical
 single_click=true
 location=bottom_left
+x=5
+y=-58
 width=20%

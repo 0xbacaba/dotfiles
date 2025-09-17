@@ -27,7 +27,7 @@ function print_options() {
 	done
 }
 print_options
-selected=`pkill wofi || print_options | wofi -c $wofi_config -S dmenu`
+selected=`pkill wofi || print_options | wofi -j -c $wofi_config -S dmenu`
 
 case "$selected" in
 	`raw ${options[0]}`)
@@ -36,7 +36,7 @@ case "$selected" in
 		;;
 	`raw ${options[1]}`)
 		echo "[suspend] systemctl suspend"
-		hyprlock &
+		hyprlock --immediate &
 		systemctl suspend
 		;;
 	`raw ${options[2]}`)

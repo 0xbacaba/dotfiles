@@ -21,6 +21,11 @@ else
 	exit
 fi
 
+if [ "$new_workspace" -le "0" ]; then
+	echo "move skipped"
+	exit
+fi
+
 move=$2
 move=${move:-'false'}
 if [ "$move" == "true" ]; then
