@@ -19,6 +19,7 @@
     "modules-right": [
         "tray",
         "custom/homeassist",
+        "battery",
 		"pulseaudio",
         "clock"
     ],
@@ -50,10 +51,10 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "{icon} {format_source}",
-        "format-muted": "{format_source}",
+        "format": "{volume}% <span font='14' rise='-2048'>{icon}</span>",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "{icon}",
+        "format-muted": "{icon}",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
@@ -97,5 +98,23 @@
     "custom/homeassist": {
         "format": " 󰟐 ",
         "on-click": "homeassistant-desktop"
+    },
+    "battery": {
+        "bat": "macsmc-battery",
+	    "interval": 60,
+	    "expand": true,
+	    "design-capacity": true,
+	    "states": {
+		    "warning": 30,
+		    "critical": 15
+	    },
+	    "events": {
+		    "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+		    "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
+	    },
+	    "format": "{capacity}% <span font='14' rise='-2048'>{icon}</span>",
+	    "format-time": "{H}h {M}m",
+	    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	    "max-length": 25
     }
 }
