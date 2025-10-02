@@ -18,7 +18,8 @@
     ],
     "modules-right": [
         "tray",
-	"pulseaudio",
+        "battery",
+        "pulseaudio",
         "clock"
     ],
     // Modules configuration
@@ -93,8 +94,21 @@
 	    "on-click": "hyprctl keyword exec '$menu'",
 	    "on-click-right": "hyprctl keyword exec '$menuAlt'"
 	},
-    "custom/homeassist": {
-        "format": " 󰟐 ",
-        "on-click": "homeassistant-desktop"
+    "battery": {
+        "bat": "BAT0",
+	    "interval": 60,
+	    "expand": true,
+	    "states": {
+		    "warning": 30,
+		    "critical": 15
+	    },
+	    "events": {
+		    "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+		    "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
+	    },
+	    "format": "{capacity}% <span font='14' rise='-2048'>{icon}</span>",
+	    "format-time": "{H}h {M}m",
+	    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	    "max-length": 25
     }
 }

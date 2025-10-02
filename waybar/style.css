@@ -103,6 +103,9 @@ label:focus {
     background-color: transparent;
     color: #ffffff;
 }
+#pulseaudio, #battery {
+    font-size: 12px;
+}
 
 #pulseaudio:hover {
     background-color: rgba(0, 0, 0, 0.2);
