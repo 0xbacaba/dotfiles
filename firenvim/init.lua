@@ -34,10 +34,12 @@ require("lazy").setup({
 			"glacambre/firenvim",
 			build = ":call firenvim#install(0)",
 			config = function()
-				if not vim.g.firenvim_config then
-					vim.g.firenvim_config = { globalSettings = {}, localSettings = {} }
-				end
-				vim.g.firenvim_config.localSettings["https?://docs.google.com/"] = { takeover = "never", priority = 1 }
+				vim.g.firenvim_config = {
+					globalSettings = {},
+					localSettings = {
+						[".*"] = { takeover = "never", priority = 1 },
+					},
+				}
 			end,
 		},
 		{
