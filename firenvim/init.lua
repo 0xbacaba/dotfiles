@@ -1,5 +1,6 @@
 vim.o.number = true
 vim.o.relativenumber = true
+vim.g.autoindent = true
 vim.o.laststatus = 0
 vim.o.termguicolors = true
 vim.o.shortmess = vim.o.shortmess .. "I"
