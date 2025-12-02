@@ -28,7 +28,7 @@
 	hide_duplicate_count = yes
 	idle_threshold = 30
 	monitor = 1
-	follow = none
+	follow = mouse
 
 [urgency_low]
 	frame_color = "#88F6EB"
