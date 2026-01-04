@@ -1,5 +1,8 @@
 # Dotfiles
 
+## General info
+All directories in this repo (except for [`global`](./global)) can be symlinked to `$XDG_CONFIG_HOME` (e.g. ~/.config).
+
 ## hyprland setup:
 
 <details>
@@ -48,6 +51,34 @@ Other:
 - Copy-Mode: vi
 - Passthrough enabled
 - Mouse enabled
+
+## zsh setup:
+
+Features:
+- xdg compliance for some apps (see [xdgninja.sh](./global/profile.d/xdgninja.sh)) based on [xdg-ninja](https://github.com/b3nj5m1n/xdg-ninja).
+- `tmux_start_or_attach` script to easily start a tmux session or attach to one that is unused. 
+  - May be integrated in terminal emulators using this as the shell command: \
+    `/usr/bin/zsh -i -l -c tmux_start_or_attach`
+- [zsh-vim-mode](https://github.com/softmoth/zsh-vim-mode) plugin
+
+Installation:
+- Install [oh-my-zsh](https://ohmyz.sh/) to `$XDG_STATE_HOME`
+
+```bash
+# <dotfiles> should be the absolute path to the root of these dotfiles
+
+# (Recommended)
+sudo chown -R root:root <dotfiles>/global
+sudo chmod -R go-w <dotfiles>/global
+
+sudo ln -sf <dotfiles>/global/profile.d/*.sh /etc/profile.d
+
+# This depends on the distro
+# For example, on arch this file is located at /etc/zsh/zshenv, on others it might be at /etc/zshenv
+sudo ln -sf <dotfiles>/global/zshenv /etc/zsh/zshenv
+```
+**Notice:** XDG variables are set in [`zshenv`](./global/zshenv) to values recommended by the [archwiki](https://wiki.archlinux.org/title/XDG_Base_Directorhttps://wiki.archlinux.org/title/XDG_Base_Directoryy).
+
 
 ## neovim setup:
 

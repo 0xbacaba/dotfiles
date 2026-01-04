@@ -6,3 +6,5 @@ hypr/.secrets/*
 !hypr/.secrets/README.md
 hypr/assets/*
 !hypr/assets/README.md
+
+.zcompdump*
