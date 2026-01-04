@@ -8,7 +8,8 @@
     </summary>
 
 - [hyprland](https://github.com/hyprwm/Hyprland) (duh)
-- [wofi](https://hg.sr.ht/~scoopta/wofi) (app-launcher/menu)
+- [vicinae](https://github.com/vicinaehq/vicinae) (app-launcher)
+- [wofi](https://hg.sr.ht/~scoopta/wofi) (menus)
 - [dunst](https://github.com/dunst-project/dunst) (notification daemon)
 - [waybar](https://github.com/Alexays/Waybar) (taskbar)
 - [hyprpaper](https://github.com/hyprwm/hyprpaper) (wallpaper utility)
