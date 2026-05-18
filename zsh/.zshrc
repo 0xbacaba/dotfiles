@@ -71,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-vi-mode arduino-cli)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,9 +107,6 @@ export LANGUAGE=$LANG
 
 alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
-# alias python=~/.config/pyvenv/bin/python
-# alias python3=~/.config/pyvenv/bin/python
-alias pip=~/.config/pyvenv/bin/pip
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias ip="ip -c"
 
@@ -123,4 +120,3 @@ if [ -z "$ZDOTDIR" ]; then
 fi
 source "$ZDOTDIR"/tmux_utils.sh
 source "$ZDOTDIR"/esp_utils.sh
-source "$ZDOTDIR"/zsh-vim-mode.plugin.zsh
