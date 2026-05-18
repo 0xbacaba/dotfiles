@@ -7,4 +7,8 @@ hypr/.secrets/*
 hypr/assets/*
 !hypr/assets/README.md
 
+hypr/monitors.conf
+hypr/monitors.lua
+hypr/workspaces.conf
+
 .zcompdump*
