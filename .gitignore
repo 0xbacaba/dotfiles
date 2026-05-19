@@ -10,5 +10,6 @@ hypr/assets/*
 hypr/monitors.conf
 hypr/monitors.lua
 hypr/workspaces.conf
+hypr/workspaces.lua
 
 .zcompdump*

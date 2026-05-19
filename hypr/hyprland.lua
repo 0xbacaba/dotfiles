@@ -1,0 +1,6 @@
+require("config.apps")
+require("config.binds")
+require("config.default")
+require("config.rules")
+require("monitors")
+require("workspaces")
