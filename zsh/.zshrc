@@ -120,3 +120,4 @@ if [ -z "$ZDOTDIR" ]; then
 fi
 source "$ZDOTDIR"/tmux_utils.sh
 source "$ZDOTDIR"/esp_utils.sh
+source "$ZDOTDIR"/other_utils.sh
