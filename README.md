@@ -1,7 +1,7 @@
 # Dotfiles
 
 ## General info
-All directories in this repo (except for [`global`](./global)) can be symlinked to `$XDG_CONFIG_HOME` (e.g. ~/.config).
+Most directories in this repo can be simply be symlinked to `$XDG_CONFIG_HOME` (e.g. ~/.config) to install them. For the ones that can't, there will be additional installation info.
 
 ## hyprland setup:
 
@@ -18,6 +18,7 @@ All directories in this repo (except for [`global`](./global)) can be symlinked 
 - [hyprpaper](https://github.com/hyprwm/hyprpaper) (wallpaper utility)
 - [polkit-kde-agent](https://github.com/KDE/polkit-kde-agent-1) (authentication agent)
 - [hyprlock](https://github.com/hyprwm/hyprlock) (lockscreen)
+- [hyprshutdown](https://github.com/hyprwm/hyprshutdown)
 - [hyprshot](https://github.com/Gustash/Hyprshot) (screenshot utility)
 - [clipse](https://github.com/savedra1/clipse) (clipboard manager)
 - [hypr-zoom](https://github.com/FShou/hypr-zoom/tree/main) (zoom utility)
@@ -125,3 +126,26 @@ See [nvim](https://github.com/0xbacaba/nvim_config) for details
   ```
 
 </details>
+
+## vim setup:
+
+The vim config is kept minimal. It just adds two plugins:
+
+- [surround.vim](https://github.com/tpope/vim-surround)
+- [repeat.vim](https://github.com/tpope/vim-repeat)
+
+Installation:
+```bash
+# <dotfiles> represents the path to the root of these dotfiles
+
+# ensure submodules are initialized:
+# in <dotfiles> run:
+git submodule update --init --recursive
+
+# GNU cureutils ln supports -r/--relative, macos' ln does not.
+# with the -r flag, <dotfiles> can be either absolute, or relative to the current working directory:
+ln -rs <dotfiles>/vim ~/.vim
+
+# without the -r flag, <dotfiles> should be either absolute, or relative to ~/.vim (-r is not supported):
+ln -s <dotfiles>/vim ~/.vim
+```

@@ -13,3 +13,5 @@ hypr/workspaces.conf
 hypr/workspaces.lua
 
 .zcompdump*
+
+vim/.netrwhist
