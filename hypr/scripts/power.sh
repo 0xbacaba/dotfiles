@@ -45,7 +45,7 @@ case "$selected" in
 		;;
 	`raw ${options[3]}`)
 		echo "[logout] hyprctl dispatch exit"
-		hyprctl dispatch exit
+		hyprshutdown
 		;;
 	*)
 		echo "WARNING: unimplemented: $selected"

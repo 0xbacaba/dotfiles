@@ -18,7 +18,7 @@ Most directories in this repo can be simply be symlinked to `$XDG_CONFIG_HOME` (
 - [hyprpaper](https://github.com/hyprwm/hyprpaper) (wallpaper utility)
 - [polkit-kde-agent](https://github.com/KDE/polkit-kde-agent-1) (authentication agent)
 - [hyprlock](https://github.com/hyprwm/hyprlock) (lockscreen)
-- [hyprshutdown](https://github.com/hyprwm/hyprshutdown)
+- [hyprshutdown](https://github.com/hyprwm/hyprshutdown) (hyprland exit helper (required for logout))
 - [hyprshot](https://github.com/Gustash/Hyprshot) (screenshot utility)
 - [clipse](https://github.com/savedra1/clipse) (clipboard manager)
 - [hypr-zoom](https://github.com/FShou/hypr-zoom/tree/main) (zoom utility)
