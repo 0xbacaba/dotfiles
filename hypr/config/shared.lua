@@ -12,10 +12,12 @@ local Layout = {
 	dwindle = {
 		name = "dwindle",
 		resize = hl.dsp.window.resize(),
+		custom_action = hl.dsp.layout("togglesplit"),
 	},
 	scrolling = {
 		name = "scrolling",
 		resize = hl.dsp.no_op(),
+		custom_action = hl.dsp.layout("colresize +conf"),
 	},
 }
 

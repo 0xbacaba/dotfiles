@@ -47,6 +47,9 @@ hl.config({
 		preserve_split = true,
 		force_split = 2,
 	},
+	scrolling = {
+		explicit_column_widths = "0.5, 1.0"
+	},
 
 	misc = {
 		force_default_wallpaper = 0,

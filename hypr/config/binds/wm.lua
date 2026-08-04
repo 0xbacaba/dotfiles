@@ -99,7 +99,7 @@ return {
 	},
 	{
 		keys = { shared.mainMod, "J" },
-		action = hl.dsp.layout("togglesplit"),
+		action = shared.layout.custom_action,
 	},
 	{
 		keys = { shared.mainMod, "F" },
@@ -138,15 +138,6 @@ return {
 	move_focus_bind("right"),
 	move_focus_bind("up"),
 	move_focus_bind("down"),
-
-	{
-		keys = { shared.mainMod, "mouse_down" },
-		action = move_focus("right"),
-	},
-	{
-		keys = { shared.mainMod, "mouse_up" },
-		action = move_focus("left"),
-	},
 
 	move_window_bind("left"),
 	move_window_bind("right"),
