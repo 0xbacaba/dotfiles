@@ -15,15 +15,18 @@ local options = {
 	screenlockUtility = "hyprlock",
 }
 
+local ssh_auth_sock = os.getenv("XDG_DATA_HOME") .. "/ssh-agent.sock"
 local startup = {
 	"waybar",
 	"hyprpaper",
 	"dunst",
-	"/usr/bin/kwalletd6",
+	"keepassxc --minimized",
+	"ssh-agent -D -a \"" .. ssh_auth_sock .. "\"",
 	"vorta",
 	options.clipboardWatch,
 	"/usr/lib/polkit-kde-authentication-agent-1",
 	"vicinae server",
+	"kbuildsycoca6" -- fix kde file associations
 }
 
 hl.on("hyprland.start", function()
@@ -34,5 +37,6 @@ end)
 
 hl.env("QT_QPA_PLATFORMTHEME", "kde")
 hl.env("XDG_MENU_PREFIX", "arch-")
+hl.env("SSH_AUTH_SOCK", ssh_auth_sock)
 
 return options
