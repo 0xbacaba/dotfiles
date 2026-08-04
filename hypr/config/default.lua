@@ -1,3 +1,5 @@
+local shared = require("config.shared")
+
 hl.config({
 	general = {
 		gaps_in = 2,
@@ -10,12 +12,16 @@ hl.config({
 
 		allow_tearing = true,
 
-		layout = "dwindle",
+		layout = shared.layout.name,
 
 		col = {
 			active_border = { colors = { "#33ccffee", "#00ff99ee" }, angle = 45 },
 			inactive_border = "#595959aa",
 		},
+	},
+
+	ecosystem = {
+		enforce_permissions = true,
 	},
 
 	decoration = {

@@ -2,10 +2,22 @@ local logfile = io.open("/tmp/hyprlua.log", "a+")
 if logfile == nil then
 	hl.notification.create({
 		text = "failed to open logfile",
-		duration = 15,
+		timeout = 15,
 		color = "red",
 	})
 end
+
+---@enum Layout
+local Layout = {
+	dwindle = {
+		name = "dwindle",
+		resize = hl.dsp.window.resize(),
+	},
+	scrolling = {
+		name = "scrolling",
+		resize = hl.dsp.no_op(),
+	},
+}
 
 return {
 	mainMod = "SUPER",
@@ -17,4 +29,6 @@ return {
 		logfile:write(text)
 		logfile:write("\n")
 	end,
+
+	layout = Layout.scrolling,
 }

@@ -120,7 +120,7 @@ return {
 	},
 	{
 		keys = { shared.mainMod, "mouse:273" },
-		action = hl.dsp.window.resize(),
+		action = shared.layout.resize,
 	},
 
 	{
@@ -138,6 +138,15 @@ return {
 	move_focus_bind("right"),
 	move_focus_bind("up"),
 	move_focus_bind("down"),
+
+	{
+		keys = { shared.mainMod, "mouse_down" },
+		action = move_focus("right"),
+	},
+	{
+		keys = { shared.mainMod, "mouse_up" },
+		action = move_focus("left"),
+	},
 
 	move_window_bind("left"),
 	move_window_bind("right"),
