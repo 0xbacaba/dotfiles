@@ -21,6 +21,15 @@ local Layout = {
 	},
 }
 
+local home = os.getenv("HOME")
+if not home then
+	hl.notification.create({
+		text = "$HOME is unset",
+		timeout = 5000,
+		color = "#f00",
+	})
+end
+
 return {
 	mainMod = "SUPER",
 
@@ -32,5 +41,10 @@ return {
 		logfile:write("\n")
 	end,
 
-	layout = Layout.scrolling,
+	layout = Layout.dwindle,
+
+	xdg = {
+		data = os.getenv("XDG_DATA_HOME") or (home .. "/.local/share"),
+		bin = os.getenv("XDG_BIN_HOME") or (home .. "/.local/bin"),
+	},
 }
