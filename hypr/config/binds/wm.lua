@@ -1,4 +1,5 @@
 local shared = require("config.shared")
+local workspaces = require("config.workspaces")
 
 ---@alias Direction "left"|"right"|"up"|"down"
 ---@alias WorkspaceDirection "left"|"right"|"origin"
@@ -18,9 +19,17 @@ local function switch_workspace(direction, move_window)
 		elseif direction == "right" then
 			new_workspace = current_workspace + active_monitors
 		elseif direction == "origin" then
-			-- TODO: implement 'goto origin workspace'
-			-- local active_monitor = hl.get_active_monitor().description
-			return
+			local active_monitor = hl.get_active_monitor()
+			if not active_monitor then
+				hl.notification.create({
+					text = "No active monitor",
+					timeout = 3000,
+					color = "#f00",
+				})
+				return
+			end
+			local rule = workspaces.find_rule(active_monitor)
+			new_workspace = tonumber(rule.workspace)
 		end
 
 		if new_workspace <= 0 then
