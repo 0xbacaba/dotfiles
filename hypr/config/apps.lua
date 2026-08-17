@@ -1,3 +1,5 @@
+local shared = require("config.shared")
+
 local options = {
 	terminal = "konsole",
 	fileManager = "dolphin",
@@ -15,18 +17,17 @@ local options = {
 	screenlockUtility = "hyprlock",
 }
 
-local ssh_auth_sock = os.getenv("XDG_DATA_HOME") .. "/ssh-agent.sock"
+local ssh_auth_sock = shared.xdg.data .. "/ssh-agent.sock"
 local startup = {
 	"waybar",
 	"hyprpaper",
 	"dunst",
 	"keepassxc --minimized",
-	"ssh-agent -D -a \"" .. ssh_auth_sock .. "\"",
-	"vorta",
+	'ssh-agent -D -a "' .. ssh_auth_sock .. '"',
 	options.clipboardWatch,
 	"/usr/lib/polkit-kde-authentication-agent-1",
 	"vicinae server",
-	"kbuildsycoca6" -- fix kde file associations
+	"kbuildsycoca6", -- fix kde file associations
 }
 
 hl.on("hyprland.start", function()
