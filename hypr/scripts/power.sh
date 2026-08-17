@@ -36,7 +36,7 @@ case "$selected" in
 		;;
 	`raw ${options[1]}`)
 		echo "[suspend] systemctl suspend"
-		hyprlock --immediate &
+		hyprlock --grace 0 &
 		systemctl suspend
 		;;
 	`raw ${options[2]}`)
@@ -45,7 +45,7 @@ case "$selected" in
 		;;
 	`raw ${options[3]}`)
 		echo "[logout] hyprctl dispatch exit"
-		hyprctl dispatch exit
+		hyprshutdown
 		;;
 	*)
 		echo "WARNING: unimplemented: $selected"

@@ -1,3 +1,9 @@
 [submodule "nvim_config"]
 	path = nvim
 	url = git@github.com:0xbacaba/nvim_config
+[submodule "vim/pack/tpope/start/repeat"]
+	path = vim/pack/tpope/start/repeat
+	url = https://tpope.io/vim/repeat
+[submodule "vim/pack/tpope/start/surround"]
+	path = vim/pack/tpope/start/surround
+	url = https://tpope.io/vim/surround

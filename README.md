@@ -1,5 +1,8 @@
 # Dotfiles
 
+## General info
+Most directories in this repo can be simply be symlinked to `$XDG_CONFIG_HOME` (e.g. ~/.config) to install them. For the ones that can't, there will be additional installation info.
+
 ## hyprland setup:
 
 <details>
@@ -15,6 +18,7 @@
 - [hyprpaper](https://github.com/hyprwm/hyprpaper) (wallpaper utility)
 - [polkit-kde-agent](https://github.com/KDE/polkit-kde-agent-1) (authentication agent)
 - [hyprlock](https://github.com/hyprwm/hyprlock) (lockscreen)
+- [hyprshutdown](https://github.com/hyprwm/hyprshutdown) (hyprland exit helper (required for logout))
 - [hyprshot](https://github.com/Gustash/Hyprshot) (screenshot utility)
 - [clipse](https://github.com/savedra1/clipse) (clipboard manager)
 - [hypr-zoom](https://github.com/FShou/hypr-zoom/tree/main) (zoom utility)
@@ -48,6 +52,34 @@ Other:
 - Copy-Mode: vi
 - Passthrough enabled
 - Mouse enabled
+
+## zsh setup:
+
+Features:
+- xdg compliance for some apps (see [xdgninja.sh](./global/profile.d/xdgninja.sh)) based on [xdg-ninja](https://github.com/b3nj5m1n/xdg-ninja).
+- `tmux_start_or_attach` script to easily start a tmux session or attach to one that is unused. 
+  - May be integrated in terminal emulators using this as the shell command: \
+    `/usr/bin/zsh -i -l -c tmux_start_or_attach`
+- [zsh-vim-mode](https://github.com/softmoth/zsh-vim-mode) plugin
+
+Installation:
+- Install [oh-my-zsh](https://ohmyz.sh/) to `$XDG_STATE_HOME`
+
+```bash
+# <dotfiles> should be the absolute path to the root of these dotfiles
+
+# (Recommended)
+sudo chown -R root:root <dotfiles>/global
+sudo chmod -R go-w <dotfiles>/global
+
+sudo ln -sf <dotfiles>/global/profile.d/*.sh /etc/profile.d
+
+# This depends on the distro
+# For example, on arch this file is located at /etc/zsh/zshenv, on others it might be at /etc/zshenv
+sudo ln -sf <dotfiles>/global/zshenv /etc/zsh/zshenv
+```
+**Notice:** XDG variables are set in [`zshenv`](./global/zshenv) to values recommended by the [archwiki](https://wiki.archlinux.org/title/XDG_Base_Directorhttps://wiki.archlinux.org/title/XDG_Base_Directoryy).
+
 
 ## neovim setup:
 
@@ -94,3 +126,26 @@ See [nvim](https://github.com/0xbacaba/nvim_config) for details
   ```
 
 </details>
+
+## vim setup:
+
+The vim config is kept minimal. It just adds two plugins:
+
+- [surround.vim](https://github.com/tpope/vim-surround)
+- [repeat.vim](https://github.com/tpope/vim-repeat)
+
+Installation:
+```bash
+# <dotfiles> represents the path to the root of these dotfiles
+
+# ensure submodules are initialized:
+# in <dotfiles> run:
+git submodule update --init --recursive
+
+# GNU cureutils ln supports -r/--relative, macos' ln does not.
+# with the -r flag, <dotfiles> can be either absolute, or relative to the current working directory:
+ln -rs <dotfiles>/vim ~/.vim
+
+# without the -r flag, <dotfiles> should be either absolute, or relative to ~/.vim (-r is not supported):
+ln -s <dotfiles>/vim ~/.vim
+```

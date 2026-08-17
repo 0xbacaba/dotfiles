@@ -1,0 +1,1 @@
+. "$HOME/.config/cargo/env"
