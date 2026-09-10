@@ -62,14 +62,18 @@ local function reorganize()
 		-- move all workspaces to their dedicated monitor
 		local monitor_count = #hl.get_monitors()
 		for _, workspace in ipairs(hl.get_workspaces()) do
-			local workspace_monitor_index = tonumber(workspace.name) % monitor_count
-			local rule_monitor_index = tonumber(rule.workspace) % monitor_count
+			local wnum = tonumber(workspace.name)
+			local rnum = tonumber(rule.workspace)
+			if wnum and rnum then
+				local workspace_monitor_index = wnum % monitor_count
+				local rule_monitor_index = rnum % monitor_count
 
-			if workspace_monitor_index == rule_monitor_index then
-				hl.dispatch(hl.dsp.workspace.move({
-					workspace = workspace,
-					monitor = rule.monitor,
-				}))
+				if workspace_monitor_index == rule_monitor_index then
+					hl.dispatch(hl.dsp.workspace.move({
+						workspace = workspace,
+						monitor = rule.monitor,
+					}))
+				end
 			end
 		end
 	end
