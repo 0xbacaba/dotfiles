@@ -149,3 +149,17 @@ ln -rs <dotfiles>/vim ~/.vim
 # without the -r flag, <dotfiles> should be either absolute, or relative to ~/.vim (-r is not supported):
 ln -s <dotfiles>/vim ~/.vim
 ```
+
+## icons:
+
+There is a custom icon theme which inherits a `base` theme and adds some overrides for certain icons.
+
+Installation:
+```bash
+# <dotfiles> represents the path to the root of these dotfiles
+
+#     vvvvvvvvvvvvvvvvv e.g.: /usr/share/icons/breeze
+ln -s <base icon theme> ~/.local/share/icons/base
+
+ln -s <dotfiles>/icons/overrides ~/.local/share/icons/overrides
+```

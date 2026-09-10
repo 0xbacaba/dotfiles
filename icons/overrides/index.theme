@@ -1,0 +1,11 @@
+[Icon Theme]
+Name=Overrides
+Comment=Local icon overrides
+Inherits=base,hicolor
+
+Directories=scalable/apps
+
+[scalable/apps]
+Size=48
+Type=Scalable
+Context=Applications
