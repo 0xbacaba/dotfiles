@@ -21,13 +21,46 @@ local Layout = {
 	},
 }
 
-local home = os.getenv("HOME")
-if not home then
+local function trim_left(str)
+	return str:gsub("^%s*(.-)", "%1")
+end
+local function trim_right(str)
+	return str:gsub("(.-)%s*$", "%1")
+end
+local function trim(str)
+	return trim_left(trim_right(str))
+end
+
+local function notify_err(text)
 	hl.notification.create({
-		text = "$HOME is unset",
+		text = text,
 		timeout = 5000,
 		color = "#f00",
 	})
+end
+
+local function shell_exec(cmd)
+	local handle = io.popen(cmd)
+	if not handle then
+		return nil
+	end
+	local result = handle:read("*a")
+	handle:close()
+
+	if not result then
+		return nil
+	end
+
+	return trim(result)
+end
+
+local home = os.getenv("HOME")
+local uid = shell_exec("id -u")
+if not home then
+	notify_err("$HOME is unset")
+end
+if not uid then
+	notify_err("Failed to read UID")
 end
 
 return {
@@ -46,5 +79,6 @@ return {
 	xdg = {
 		data = os.getenv("XDG_DATA_HOME") or (home .. "/.local/share"),
 		bin = os.getenv("XDG_BIN_HOME") or (home .. "/.local/bin"),
+		runtime = os.getenv("XDG_RUNTIME_DIR") or ("/run/user/" .. uid),
 	},
 }

@@ -17,7 +17,7 @@ local options = {
 	screenlockUtility = "hyprlock",
 }
 
-local ssh_auth_sock = shared.xdg.data .. "/ssh-agent.sock"
+local ssh_auth_sock = shared.xdg.runtime .. "/ssh-agent.sock"
 local startup = {
 	"waybar",
 	"hyprpaper",
